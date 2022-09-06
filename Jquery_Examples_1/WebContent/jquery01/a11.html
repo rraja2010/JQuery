@@ -1,0 +1,110 @@
+this program having problem!!
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$("#target").submit(function(){
+			
+			var fn = $("#fn").val();
+			var ln = $("#ln").val();
+			
+			if(fn==""||fn.length==0)
+				{
+					alert("Please Enter the First Name!!!");
+					$("#fn").focus();
+					return false;
+				}
+			if(ln==""||ln.length==0)
+				{
+					alert("Please Enter the Last Name!!");
+					$("#ln").focus();
+					return false;
+				}
+			
+				
+				var genderlen = $("input:radio:checked").length;
+				if(genderlen==0)
+					{
+						alert("Please enter the Gender!!");
+						$("input:radio").focus();
+						return false;
+					}
+				else
+					{
+						var gender="";
+						$("input:radio:checked").each(function(){
+							gender=$(this).val();
+						});
+						$("#gn").html("<b>Gender:</b>"+gender);
+					}
+				
+				
+				var status=false;
+				
+				$("#skills").each(function(){
+					if($(this).is(":checkbox:checked"))
+						{
+							status = true;
+						}
+				});
+				
+				if(!status)
+					{
+						alert("Please Select the skill!!");
+						$("#skills").focus();
+						return false;
+					}
+				
+				var education = $("#edu").val();
+				if(education==0)
+					{
+						alert("Select Education!!");
+						$("#edu").focus();
+						return false;
+					}
+				
+				var address = $("#address").val();
+				
+				if(address==0)
+					{
+						alert("Address is required one!!");
+						$("#address").focus();
+						return false;
+					}
+				return true;
+		});
+		
+	});	
+	
+	</script>
+
+</head>
+<body>
+	<form id ="target" action="success.html">
+		First Name:<input type="text" name="fname" id="fn"/></br></br>
+		Last Name :<input type="text" name="lname" id="ln"/></br></br>
+		Gender:<input type="radio" name="gender" id="gn" value="male"/>Male
+				<input type="radio" name="gender" id="gn" value="female">Female</br></br>
+				
+		Skills:<input type="checkbox" name="skills" id="skills"/>C
+				<input type="checkbox" name="skills" id="skills"/>C++
+				<input type="checkbox" name="skills" id="skills"/>JAVA
+				<input type="checkbox" name="skills" id="skills"/>JSP</br></br>
+		Education:<select id="edu" name="education">
+						<option value="o">-select-</option>
+						<option value="be">BE</option>
+						<option value="mba">MBA</option>
+						<option value="mca">MCA</option>		
+				  </select></br></br>
+		Address:<textarea rows="5" cols="20" id="address"></textarea></br></br>
+			<input type="submit" value="Registration!!"/>	
+		
+	</form>
+</body>
+</html>

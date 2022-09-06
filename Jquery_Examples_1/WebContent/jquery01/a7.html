@@ -1,0 +1,43 @@
+this program having problem
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+
+<script type="text/javascript">
+		
+		.selected
+		{
+			color:blue;
+			background:yellow;
+		}
+</script>
+
+<script>
+	
+	$(document).ready(function(){
+		$("#b1").click(function(){
+			$("h3").addClass("selected");
+		});
+		
+		$("#b2").click(function(){
+			$("h3").removeClass("selected");
+		});
+	});		
+	
+</script>
+
+</head>
+<body>
+	<h3>WELCOME!!!</h3></br></br>
+	<h3>AVENUE INDIA PVT LTD.!!</h3></br>
+	
+	<input type="button" id="b1" value="add color"/>&nbsp;&nbsp;
+	<input type="button" id="b2" value="remove color"/>&nbsp;&nbsp;
+</body>
+</html>

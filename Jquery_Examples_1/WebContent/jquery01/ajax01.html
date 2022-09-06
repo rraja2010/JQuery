@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		
+	$(document).ready(function(){
+		$("button").click(function(){
+			$.ajax({
+				type:"GET",
+				//data:'name=Avenue india pvt ltd',
+				url:"amit.txt",
+				success:function(data){
+					alert("Ajax:"+data);
+				},
+				error:function(error){
+					alert(error.message);
+				}
+			});
+		});
+	});
+	
+	</script>
+</head>
+<body>
+	<form>
+		<button>Click On Button</button>
+	</form>
+</body>
+</html>

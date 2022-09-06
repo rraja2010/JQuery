@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("form").submit(function(){
+				var firstName=$("#firstName").val();
+				if(firstName==null||firstName.length==0)
+					{
+						alert("Please enter the FirstName");
+						$("#firstName").focus();
+						return false;
+					}
+				else
+					{
+						$("#firstName").html("<b>First Name122:</b>"+firstName);
+					}
+				
+				var ln = $("#lastName").val();
+				if(ln==null||ln.length==0)
+					{
+						alert("Please Enter the LastName!");
+						$("#lastName").focus();
+						return false;
+					}
+				else
+					{
+						$("#lastName").html("<b>Last Name:</b>"+ln);
+					}
+				
+				var age = $("#age").val();
+				if(age==""||age.length==0)
+					{
+						alert("Please Enter the Age!!");
+						$("#age").focus();
+						return false;
+					}
+				else
+					{
+						$("#age").html("<b>Age:</b>"+age);
+					} 
+				
+				var genderlen=$("input:radio:checked").length
+				if(genderlen==0)
+					{
+						alert("Please select the gender!!");
+						$("#gn").focus();
+						return false 
+					} 
+				
+				var email=$("#email").val();
+				if(email.length==0||eamil=="")
+					{
+						alert("Please enter the email!!");
+						$("#email").focus();
+						return false;
+					}
+			});
+		});
+	
+	</script>
+</head>
+<body>
+	<form name="regForm" action="success.html">
+		<table  border = "1" align="center">
+			<th>
+				<td colspan="2">Registration Form</td>
+			</th>
+			
+			<tr>
+				<td>First Nmae:</td>
+				<td><input type="text" name="firstName" id="firstName"></td>
+			</tr>
+			
+			<tr>
+				<td>Last Nmae:</td>
+				<td><input type="text" name="lastName" id="lastName"></td>
+			</tr>
+			
+			<tr>
+				<td>Age:</td>
+				<td><input type="text" name="age" id="age"></td>
+			</tr>
+			
+			<tr>
+				<td>Gender:</td>
+				<td><input type="radio" name="gender" id="gn" value="male"/>Male
+					<input type="radio"name="gender" id="gn" value="female"/>Female
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="email" id="email"></td>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Register" name="submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#field").change(function(){
+			var value=$("#field").val();
+			$("p").text(value);
+		});
+	});
+
+</script>
+</head>
+<body>
+		Car:
+			<select id="field" name="cars">
+				<option value="Volvo">Volvo</option>
+				<option value="Saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+			</select>
+			<p></p></br>
+		
+</body>
+</html>

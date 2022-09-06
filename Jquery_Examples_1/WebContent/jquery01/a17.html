@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$("em").addClass("selected1");
+		$("#myid").addClass("high");
+	});
+</script>
+<style>
+.selected1 {
+	color: red;
+}
+
+.high {
+	background: yellow;
+}
+</style>
+
+</head>
+<body>
+	<em title="Bold and Brave">This is first paragraph.</em>
+	<p id="myid">This is second paragraph.</p>
+</body>
+</html>

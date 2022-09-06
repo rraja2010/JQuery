@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#prependDiv").click(function(){
+				$("p").prepend("Prepend");
+			});
+			
+			$("#appendDiv").click(function({
+				$("p").append("Append");
+			});
+			
+			$("#beforeDive").click(function(){
+				$("img").before("Before");
+			});
+			
+			$("#afterDiv").click(function(){
+				$("img").after("After");
+			});
+		});
+	
+	</script>
+</head>
+<body>
+	<p>Avenue India pvt ltd!</p></br>
+	<img src="amit.jpg" width="100px" height="100px"></br></br>
+	
+	<button id="prependDiv">Prepend</button>
+	<button id="appendDiv">Append</button>
+	<button id="beforeDive">Before</button>
+	<button id="afterDiv">After</button>
+</body>
+</html>

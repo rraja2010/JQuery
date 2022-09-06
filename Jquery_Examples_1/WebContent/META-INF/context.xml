@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+<Resource auth="Container"
+name="jdbc/sql"
+type="javax.sql.DataSource"
+driverClassName="oracle.jdbc.driver.OracleDriver"
+url="jdbc:oracle:thin:@localhost:1521:XE"
+username="amit"
+password="amit"
+maxIdle="10"
+maxActive="200"
+maxWait="5"
+removeAbandoned="true"
+removeAbandonedTimeout="1200"
+/>
+</Context>

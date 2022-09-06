@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="jquery-1.11.1.js"></script>
+<title>Insert title here</title>
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			alert("I am Ready!!!");
+			$("#click").click(function(){
+				var value = $("#name").val();
+					$("p").text(value);
+			});
+		});
+	
+	</script>
+
+</head>
+<body>
+	<input type="text" id="name" />
+	</br></br>
+	<input id="click" type="button" value="submit">
+	<p></p>
+</body>
+</html>

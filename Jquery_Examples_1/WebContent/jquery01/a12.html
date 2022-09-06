@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#readAll").click(function(){
+				$("#nameid").html("Name val:"+$("#name").val());
+				$("#textid").text("Text val:"+$("#div1").html());
+				$("#htmlid").html("Html Val:"+$("#div1").html());
+				$("#hrefid").html("Href val:"+$("a").attr("href"));
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<input type="text" id="name" value="Avenue"/></br></br>
+		
+		<div id="div1"><b>Santacruz</b>is the railway station.<font color="lightblue">Best</font></div>
+		
+		<a href="www.google.com">Google</a></br></br>
+		
+		<button id="readAll">ReadAll</button></br></br>
+		
+		<div id="nameid"></div></br>
+		<div id="textid"></div></br>
+		<div id="htmlid"></div></br>
+		<div id="hrefid"></div>
+</body>
+</html>

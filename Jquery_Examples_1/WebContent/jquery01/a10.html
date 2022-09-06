@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$("#target").submit(function(){
+					var un =$("#un").val();
+					var pw = $("#pw").val();
+					
+					if(un==""||un.length==0)
+						{
+							alert("User name is required one!!");
+							$("#un").focus();
+							return false;
+						}
+					
+					if(pw==""||pw.length==0)
+					 {
+							alert("Pass Word is required one!!!");
+							$("#pw").focus();
+							return false;
+					 }
+					return true;
+				});
+			});
+	</script>
+
+</head>
+<body>
+	<form id="target" action="success.html">
+		Username:<input type="text" name="username" id="un"/></br></br>
+		Password:<input type="text" name="password" id="pw"/></br></br> 
+		<input type="submit" value="Login"/>
+	</form>
+</body>
+</html>
